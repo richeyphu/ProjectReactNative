@@ -1,5 +1,5 @@
 # Ignore everything
 *
 
-# But not this files...
+# But not this file...
 !App.js
