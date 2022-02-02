@@ -38,7 +38,10 @@ const CustomSidebarMenu = props => {
             }}>
             Rate Us
           </Text>
-          <Image source={require('../assets/star_filled.png')} />
+          <Image
+            style={{width: 15, height: 15, marginLeft: 5}}
+            source={require('../assets/star_filled.png')}
+          />
         </View>
       </DrawerContentScrollView>
     </SafeAreaView>
