@@ -15,7 +15,7 @@ import {
   Switch,
 } from 'native-base';
 
-const MenuScreen = () => {
+const MenuScreen = ({navigation}) => {
   return (
     <ScrollView style={{flex: 1}}>
       <View>
@@ -30,27 +30,38 @@ const MenuScreen = () => {
         </Text>
         {/* Native base code starts here */}
         <Content>
-          <ListItem icon>
+          {/* Home Page */}
+          <ListItem
+            icon
+            style={{marginBottom: 10, marginTop: 10}}
+            onPress={() => {
+              navigation.navigate('HomeStack');
+            }}>
             <Left>
               <Button style={{backgroundColor: '#FF9501'}}>
                 <Icon active name="home" />
               </Button>
             </Left>
             <Body>
-              <Text>หน้าหลัก</Text>
+              <Text>Home Page</Text>
             </Body>
             <Right>
               <Icon active name="arrow-forward" />
             </Right>
           </ListItem>
-          <ListItem icon>
+          {/* Product Page */}
+          <ListItem
+            icon
+            onPress={() => {
+              navigation.navigate('ProductStack');
+            }}>
             <Left>
               <Button style={{backgroundColor: '#007AFF'}}>
                 <Icon active name="cube" />
               </Button>
             </Left>
             <Body>
-              <Text>สินค้า</Text>
+              <Text>Product</Text>
             </Body>
             <Right>
               <Icon active name="arrow-forward" />
